@@ -3,4 +3,4 @@ jdk:
   - oraclejdk8
 
 script:
-  ./gradlew build
+  ./gradlew build -x checkstyleTest
