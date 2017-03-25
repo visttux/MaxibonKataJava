@@ -44,7 +44,7 @@ public class KarumiHQsProperties {
 
     @Property
     public void numberOfMaxibonsShouldBeGreaterThanTwoWhenDevelopersGoInGroup(
-            List<@From(NotSoHungryDevelopersGenerator.class) Developer> developers ) {
+            List<@From(KarumiesGenerator.class) Developer> developers ) {
         hq.openFridge(developers);
 
         int maxibonsLeft = hq.getMaxibonsLeft();
