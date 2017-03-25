@@ -21,7 +21,8 @@ public class KarumiHQsProperties {
     }
 
     @Property
-    public void numberOfMaxibonsShouldBeGreaterThanTwo(@From(DevelopersGenerator.class) Developer developer) {
+    public void numberOfMaxibonsShouldBeGreaterThanTwo(
+            @From(DevelopersGenerator.class) Developer developer) {
         hq.openFridge(developer);
 
         int maxibonsLeft = hq.getMaxibonsLeft();
@@ -30,7 +31,8 @@ public class KarumiHQsProperties {
     }
 
     @Property
-    public void numberOfMaxibonsShouldBeGreaterThanTwoWhenNotSoHungry(@From(NotSoHungryDevelopersGenerator.class) Developer developer) {
+    public void numberOfMaxibonsShouldBeGreaterThanTwoWhenNotSoHungry(
+            @From(NotSoHungryDevelopersGenerator.class) Developer developer) {
         hq.openFridge(developer);
 
         int maxibonsLeft = hq.getMaxibonsLeft();
