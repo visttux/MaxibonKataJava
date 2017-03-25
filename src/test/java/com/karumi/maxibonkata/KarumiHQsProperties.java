@@ -70,9 +70,6 @@ public class KarumiHQsProperties {
             @From (NotSoHungryDevelopersGenerator.class) Developer developer) {
         hq.openFridge(developer);
 
-        String expectedResult = "Hi guys, I'm " + developer.getName() + ". We need more maxibons!";
-        verify(chat, never()).sendMessage(expectedResult);
+        verify(chat, never()).sendMessage(anyString());
     }
-
-
 }
