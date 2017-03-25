@@ -7,6 +7,8 @@ import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 
+import java.util.List;
+
 import static junit.framework.TestCase.assertTrue;
 import static org.mockito.Mockito.mock;
 
@@ -40,4 +42,13 @@ public class KarumiHQsProperties {
         assertTrue(maxibonsLeft >= 2);
     }
 
+    @Property
+    public void numberOfMaxibonsShouldBeGreaterThanTwoWhenDevelopersGoInGroup(
+            List<@From(NotSoHungryDevelopersGenerator.class) Developer> developers ) {
+        hq.openFridge(developers);
+
+        int maxibonsLeft = hq.getMaxibonsLeft();
+
+        assertTrue(maxibonsLeft >= 2);
+    }
 }
