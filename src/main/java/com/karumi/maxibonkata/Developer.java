@@ -33,7 +33,7 @@ class Developer {
     return name;
   }
 
-  public int getNumberOfMaxibonsToGrab() {
+  int getNumberOfMaxibonsToGrab() {
     return numberOfMaxibonsToGrab;
   }
 
